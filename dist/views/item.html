@@ -1,0 +1,38 @@
+<html>
+<head>
+<meta http-equiv="Cache-control" content="no-cache">
+<link rel="stylesheet" href="styles/multizoom.css">
+<script src="bower_components/jquery/jquery.js"></script>
+<script src="scripts/multizoom.js"></script>
+
+<script type="text/javascript">
+
+jQuery(document).ready(function($){
+	
+	$('#multizoom2').addimagezoom({ 
+		descArea: '#description2',
+		disablewheel: true
+	});
+})
+
+function removeImageZoom() {
+	alert("hej");
+}
+
+</script>
+</head>
+<body>
+<div>
+	<h3>{{item.title}}</h3>
+	<div class="targetarea diffheight"><img id="multizoom2" alt="zoomable" title="" src="images/items/{{item.images[0].small}}"></div>
+	<div id="description2">{{item.images[0].title}}</div>
+	<div class="multizoom2 thumbs">
+		<span ng-repeat="image in item.images">
+			<a href="images/items/{{image.small}}" data-dims="{{image.dimension}}" data-large="images/items/{{image.large}}" data-title="{{image.title}}"><img src="images/items/{{image.thumbnail}}" alt="{{image.alt}}" title=""></a>
+		</span>
+	</div>
+
+	<a onclick="removeImageZoom()" href="#/">Back to items</a>
+</div>
+</body>
+</html>
