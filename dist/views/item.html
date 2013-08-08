@@ -3,8 +3,8 @@
 <meta http-equiv="Cache-control" content="no-cache">
 <meta http-equiv="Expires" content="-1">
 <link rel="stylesheet" href="styles/multizoom.css">
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.2/jquery.min.js"></script>
-<script src="scripts/multizoom.js"></script>
+
+<script src="scripts/plugins.js"></script>
 
 <script type="text/javascript">
 
@@ -29,7 +29,7 @@ function removeImageZoom() {
 	<div id="description2">{{item.images[0].title}}</div>
 	<div class="multizoom2 thumbs">
 		<span ng-repeat="image in item.images">
-			<a href="images/items/{{image.small}}" data-dims="{{image.dimension}}" data-large="images/items/{{image.large}}" data-title="{{image.title}}"><img src="images/items/{{image.thumbnail}}" alt="{{image.alt}}" title=""></a>
+			<a href="images/items/{{image.small}}" data-dims="{{image.dimension}}" data-large="images/items/{{image.large}}" data-title="{{image.title}}"><img ng-src="images/items/{{image.thumbnail}}" alt="{{image.alt}}" title=""></a>
 		</span>
 	</div>
 
