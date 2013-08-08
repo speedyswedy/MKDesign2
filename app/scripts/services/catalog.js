@@ -30,7 +30,7 @@ angular.module('MKDesignApp')
                                 large : 'listenmusic.jpg',
                                 title : 'Relaxing Music',
                                 thumbnail : 'listen_tmb.jpg',
-                                alt : 'Relaxing Music',
+                                alt : 'Relaxing Music2',
                                 dimension : '300, 225'
                           }]
                 }
