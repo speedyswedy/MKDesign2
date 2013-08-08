@@ -25,11 +25,11 @@ function removeImageZoom() {
 <body>
 <div>
 	<h3>{{item.title}}</h3>
-	<div class="targetarea diffheight"><img id="multizoom2" alt="zoomable" title="" src="images/items/{{item.images[0].small}}"></div>
+	<div class="targetarea diffheight"><img id="multizoom2" alt="zoomable" title="" src="#/images/items/{{item.images[0].small}}"></div>
 	<div id="description2">{{item.images[0].title}}</div>
 	<div class="multizoom2 thumbs">
 		<span ng-repeat="image in item.images">
-			<a href="images/items/{{image.small}}" data-dims="{{image.dimension}}" data-large="images/items/{{image.large}}" data-title="{{image.title}}"><img src="images/items/{{image.thumbnail}}" alt="{{image.alt}}" title=""></a>
+			<a href="#/images/items/{{image.small}}" data-dims="{{image.dimension}}" data-large="images/items/{{image.large}}" data-title="{{image.title}}"><img src="#/images/items/{{image.thumbnail}}" alt="{{image.alt}}" title=""></a>
 		</span>
 	</div>
 
