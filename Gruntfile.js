@@ -305,8 +305,7 @@ module.exports = function (grunt) {
     cdnify: {
       dist: {
         html: [
-          '<%= yeoman.dist %>/*.html', 
-          '<%= yeoman.dist %>/views/*.html'
+          '<%= yeoman.dist %>/*.html'
         ]
       }
     },
