@@ -2,12 +2,12 @@
 	<li ng-repeat="item in items">	
 		<div ng-repeat="item in items">
 		<div class="simpleCart_shelfItem">
-			<span><a class="item_name" href="#/item/{{item.id}}">
+			<span><a class="item_name" ng-href="#/item/{{item.id}}">
 				{{item.name}}</a></span>
 		    <span class="item_price">{{item.price}} kr</span>
 			<span><input type="text" value="{{item.quantity}}" class="item_Quantity"></span>
-			<span><a class="item_add" href="javascript:;">Add to Cart </a></span>
-			<img id="hej" class="item-thumb" src="imageitems/{{item.front_image}}">
+			<span><a class="item_add" ng-href="javascript:;">Add to Cart </a></span>
+			<img id="hej" class="item-thumb" ng-src="imageitems/{{item.front_image}}">
 		</div>
 	</div>
 	</li>

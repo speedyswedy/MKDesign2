@@ -257,7 +257,10 @@ module.exports = function (grunt) {
             'bower_components/**/*',
             'images/{,*/}*.{gif,webp}',
             'imageitems/{,*/}**',
-            'styles/fonts/*'
+            'styles/fonts/*',
+            'scripts/multizoom.js',
+            'bower_components/jquery/jquery.js',
+            'styles/multizoom.css'
           ]
         }, {
           expand: true,
@@ -307,7 +310,8 @@ module.exports = function (grunt) {
     cdnify: {
       dist: {
         html: [
-          '<%= yeoman.dist %>/*.html'
+          '<%= yeoman.dist %>/*.html',
+          '<%= yeoman.dist %>/views/item.html'
         ]
       }
     },
