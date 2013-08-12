@@ -5,9 +5,18 @@
 	<td>Price</td>
 	<td>Quantity</td>
 </tr>
-<tr ng-repeat="item in basket.get()">
+<tr ng-repeat="item in items">
 	<td>{{item.name}}</td>
 	<td>{{item.price}}</td>
 	<td>{{item.quantity}}</td>
 </tr>
 </table>
+
+<div id="checkout">
+	<span class="simpleCart_quantity"></span>
+	items -
+	<span class="simpleCart_total"></span>
+</div>
+
+<a href="/#checkout" class="simpleCart_checkout">checkout</a>
+<a href="/#checkout" class="simpleCart_empty">Empty</a>

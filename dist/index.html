@@ -13,7 +13,8 @@
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet" href="styles/a168181e.main.css">
+        <link rel="stylesheet" href="styles/dad29ece.main.css">
+    
 </head>
 
   <body ng-app="MKDesignApp">
@@ -41,7 +42,7 @@
         </div>
     </div>
     <div id="wrapper">     
-        <div id="content_inside">
+        <div id="content_inside" style="border:1px solid black;height:400px">
             <div id="sidebar">
                 <img src="images/5e43c0c8.title1.gif" alt="" width="174" height="30"><br>                    
                 <ul id="list">
@@ -55,18 +56,27 @@
                     <li><a href="#">Illum secundum</a></li>
                     <li class="color"><a href="#">Nibh valde</a></li>
                     <li><a href="#">Consequat</a></li>
-                    <li class="color"><a href="#">Nibh valde tincidunt</a></li>
-                    <li><a href="#">Appellatio vel</a></li>
-                    <li class="color"><a href="#">Illum secundum</a></li>
-                    <li><a href="#">Consequat</a></li>
-                    <li class="color"><a href="#">Appellatio vel</a></li>
-                    <li><a href="#">Illum secundum</a></li>
-                    <li class="color"><a href="#">Nibh valde</a></li>
                 </ul>
             </div>
             <div id="main_block">
                 <!-- Add your site or application content here -->
-                <div class="container" ng-view=""></div>
+                <table style="height:400px">
+                    <tr>
+                        <td valign="top">
+                            <div class="container" ng-view=""></div>
+                        </td>
+                        <td valign="top">
+                            <div id="checkout">
+                                <div class="simpleCart_items">
+                                </div>
+                
+                                <!--Here's the Links to Checkout and Empty Cart-->
+                                <a href="#" class="simpleCart_empty">empty cart</a>
+                                <a href="#" class="simpleCart_checkout">Checkout</a>
+                            </div>
+                        </td>
+                   </tr>
+                </table>
             </div>
         </div>
     </div>
@@ -102,7 +112,7 @@
 
         <script src="scripts/25e920e4.modules.js"></script>
 
-        <script src="scripts/009adc63.scripts.js"></script>
+        <script src="scripts/9f6f960b.scripts.js"></script>
 
         <script type="text/javascript">
 
@@ -110,15 +120,24 @@
             checkout: {
               type: "PayPal",
               email: "per.karlsson@altran.com"
-            }
+            },
+            cartColumns: [
+                { attr: "name", label: "Name1"},
+                { view: "currency", attr: "price", label: "Price"},
+                { view: "decrement", label: false},
+                { attr: "quantity", label: "Qty"},
+                { view: "increment", label: false},
+                { view: "currency", attr: "total", label: "SubTotal" },
+                { view: "remove", text: "Remove", label: false}
+            ],
+            cartStyle: "table" 
           });
           
-          simpleCart.currency({
-              code: "Kronor" ,
-              symbol: "kr" ,
-              name: "Svenska Kronor"
-            });
-
+          simpleCart.currency({ 
+            code:"SEK", 
+            symbol:"SEK ", 
+            name:"Swedish Krona"
+          });
         </script>
 
 </body>

@@ -2,6 +2,5 @@
 
 angular.module('MKDesignApp')
   .controller('CheckoutCtrl', function ($scope, basket) {
-    $scope.basket = basket;
-    console.log("Pelle2");
+    $scope.items = basket.get();
   });
