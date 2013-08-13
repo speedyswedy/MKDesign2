@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('MKDesignApp', [])
-  .config(function ($routeProvider) {
+  .config(function ($locationProvider, $routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/items.html',
@@ -22,4 +22,8 @@ angular.module('MKDesignApp', [])
       .otherwise({
         redirectTo: '/'
       });
+
+
   });
+
+

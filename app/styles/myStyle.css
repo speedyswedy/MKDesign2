@@ -2,6 +2,69 @@
 	width : 100px;
 	height : 100px;
 }
-simpleCart_items {
-	position: relative;
+#content_inside : {
+	border : 1px solid black;
+	height : 420px;
+}
+.btn-custom {
+  width : 70px;
+  height : 20px;
+  
+  border-color: #547223 #547223 hsl(193, 32%, 41.5%);
+  color: #547223 !important;
+  background-color: #A3C02A;
+}
+.cartHeaders,.totalRow{display:none;}
+        
+.simpleCart_items {
+    position: relative;
+    top:0px;
+    left:45px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 12px;
+    margin: 0px;
+    width: 400px;
+    text-align: left;
+    border-collapse: collapse;
+}
+.simpleCart_items thead th.rounded-company {
+    background: #b9ffff url('table-images/left.png') left -1px no-repeat;
+}
+.simpleCart_items thead th.rounded-q4 {
+    background: #ffffff url('table-images/right.png') right -1px no-repeat;
+}
+.simpleCart_items th {
+    padding: 8px;
+    font-weight: normal;
+    font-size: 13px;
+    color: #039;
+    background: #547223;
+}
+
+.simpleCart_items td {
+    padding: 8px;
+    background: #A3C02A;
+    border-top: 1px solid #fff;
+    color: #669;
+}
+
+.simpleCart_items tfoot td.rounded-foot-left{
+    background: #e8edff url('table-images/botleft.png') left bottom no-repeat;
+}
+
+.simpleCart_items tfoot td.rounded-foot-right {
+    background: #e8edff url('table-images/botright.png') right bottom no-repeat;
+}
+
+.simpleCart_items tbody tr:hover td {
+    background: #d0dafd;
+}
+
+.total {
+    position:relative;
+    bottom:0;
+    left:60px;
+    float:left;
+    color:#c23f26;
+    margin-bottom:6px
 }

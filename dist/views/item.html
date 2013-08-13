@@ -28,19 +28,26 @@
 </script>
 </head>
 <body>
-<div>
-	<h3>{{item.title}}</h3>
-	<div class="zoom" data-zoomed-image="imageitems/{{currentImage.large}}">
-		<img style="height:300px;width:400px" class="image_zoom2" ng-src="imageitems/{{currentImage.small}}">
-	</div>
-	<div id="description">{{currentImage.title}}</div>
-	<div class="multizoom thumbs">
-		<span ng-repeat="image in item.images">
-			<img ng-click="changeImage(image.small);" ng-src="imageitems/{{image.thumbnail}}" alt="{{image.alt}}" title="">
-		</span>
-	</div>
-
-	<a ng-href="#/items">Back to items</a>
-</div>
+<table>
+	<tr>
+		<td align="right">
+			<button class="btn-custom" ng-click="go();">Back</button>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h1>{{item.name}}</h1>
+			<div class="zoom" data-zoomed-image="imageitems/{{currentImage.large}}">
+				<img style="height:250px;width:350px" class="image_zoom2" ng-src="imageitems/{{currentImage.small}}">
+			</div>
+			<div id="description">{{currentImage.title}}</div>
+			<div class="multizoom thumbs">
+				<span ng-repeat="image in item.images">
+					<img ng-click="changeImage(image.small);" ng-src="imageitems/{{image.thumbnail}}" alt="{{image.alt}}" title="">
+				</span>
+			</div>
+		</td>
+	</tr>
+</table>
 </body>
 </html>

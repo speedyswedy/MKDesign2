@@ -1,10 +1,12 @@
 'use strict';
 
 angular.module('MKDesignApp')
-  .controller('ItemCtrl', function ($scope, $routeParams, catalog, $route, image) {
+  .controller('ItemCtrl', function ($scope, $location, $routeParams, catalog, $route, image) {
 
   		$scope.items = catalog.get();
 		$scope.item = $scope.items[$routeParams.id];
+
+		$scope.location = $location;
 		
 		$scope.currentImage = $scope.item.images[image.get()];
 
@@ -19,5 +21,10 @@ angular.module('MKDesignApp')
   	 				}
   	 			}
   	 		}
+ 		};
+
+ 		$scope.go = function() {
+ 			console.log("hjej");
+ 			$scope.location.path('/items');
  		};
   });
